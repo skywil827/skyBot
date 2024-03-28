@@ -1,5 +1,4 @@
-package myBot;
-
+package skyBot;
 import ai.abstraction.pathfinding.AStarPathFinding;
 import ai.core.AI;
 import ai.core.AIWithComputationBudget;
@@ -8,12 +7,12 @@ import rts.*;
 import rts.units.Unit;
 import rts.units.UnitType;
 import rts.units.UnitTypeTable;
-
 import java.util.*;
-
 import static rts.PhysicalGameState.TERRAIN_WALL;
 
-public class myBot extends AIWithComputationBudget {
+
+
+public class skyBot extends AIWithComputationBudget {
     UnitTypeTable m_utt;
     List<Integer> _locationsTaken;
     long _startCycleMilli;
@@ -63,7 +62,7 @@ public class myBot extends AIWithComputationBudget {
         }
     };
 
-    public myBot(UnitTypeTable utt) {
+    public skyBot(UnitTypeTable utt) {
         super(-1, -1);
         m_utt = utt;
     }
@@ -596,7 +595,7 @@ public class myBot extends AIWithComputationBudget {
 
     @Override
     public AI clone() {
-        return new myBot(m_utt);
+        return new skyBot(m_utt);
     }
 
     // function checks if an Unit is an enemey Unit
